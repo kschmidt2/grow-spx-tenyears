@@ -50,9 +50,9 @@
   
   .highcharts-tracker-line {
     stroke-linejoin: round;
-    stroke: $slate-secondary-5;
-    stroke-width: 1.5;
-    stroke-dasharray: 4;
+    // stroke: $slate-secondary-5;
+    stroke-width: 3;
+    // stroke-dasharray: 4;
     fill: none;
   }
   
@@ -84,7 +84,8 @@
   .highcharts-yaxis-labels {
     fill: $slate-secondary-5;
     // use this to change the axis label
-    & span:first-child {
+    & span:last-child {
+      transform: translate(10px,0) !important;
       &:after {
         content: "%";
     }
@@ -171,6 +172,7 @@
     stroke-width: 2px;
     stroke-linecap: round;
     stroke-linejoin: round;
+    display: none;
   }
   
   .highcharts-state-hover .highcharts-graph {
@@ -210,8 +212,8 @@
   }
   
   .highcharts-color-1 {
-    fill: $slate-secondary-3;
-    stroke: $slate-secondary-3;
+    fill: $purple-primary;
+    stroke: $purple-primary;
   }
   
   .highcharts-color-2 {
