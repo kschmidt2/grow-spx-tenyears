@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         plotOptions: {
             series: {
                 lineWidth: 1,
-                clip: false,
+                // clip: false,
                 marker: {
                     enabled: false,
                     symbol: 'circle',
