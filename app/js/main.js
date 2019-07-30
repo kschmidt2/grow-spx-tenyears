@@ -15,23 +15,23 @@ Highcharts.setOptions({
 document.addEventListener('DOMContentLoaded', function () {
     const myChart = Highcharts.chart('chart-container', {
         chart: {
-            type: 'line',
+            type: 'area',
             styledMode: true,
             spacingBottom: 25,
             spacingRight: 100,
-            spacingLeft: -10
+            spacingLeft: -.5
         }, 
         title: {
             text: null
         },
         data: {
-            googleSpreadsheetKey: '1ACho-7HV21S9J4gSZC_TH2uNmTS7xeBabJm4ySz-zEs',
-            googleSpreadsheetWorksheet: 3
+            googleSpreadsheetKey: '1B3YrD8-8CuVWEYUYNnYdiPSQuK5W8LIarki6xn0AjSQ',
+            // startColumn: 2,
+            endColumn: 1
         },
         plotOptions: {
             series: {
                 lineWidth: 1,
-                // clip: false,
                 marker: {
                     enabled: false,
                     symbol: 'circle',
@@ -61,16 +61,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 useHTML: true,
                 overflow: 'allow'
             },
+            max: 3500,
             min: 0,
-            max: 10,
-            tickAmount: 6
+            tickAmount: 8
         },
         credits: {
             enabled: false
         },
         tooltip: {
             shadow: false,
-            padding: 10
+            padding: 10,
+            formatter: function () {
+                return 'S&P 500: <b>' + this.y.toFixed(0);
+            }
         },
         responsive: {
             rules: [{
